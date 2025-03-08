@@ -31,3 +31,9 @@ def test_divide_by_zero():
     """Ensure division by zero raises ValueError."""
     with pytest.raises(ValueError, match="Cannot divide by zero"):
         Calculation(Decimal('10'), Decimal('0'), divide).perform()
+
+def test_operation(a, b, operation, expected):# pylint: disable=invalid-name
+    '''Testing various operations'''
+    calculation = Calculation.create(a, b, operation)
+    assert calculation.perform() == expected, f"{operation.__name__} operation failed"
+     
