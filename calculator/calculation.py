@@ -1,16 +1,28 @@
+"""
+Module defining the Calculation class for executing arithmetic operations.
+"""
+
 from decimal import Decimal
 from typing import Callable
+
 class Calculation:
-    def __init__(self, a: Decimal, b: Decimal, operation: Callable[[Decimal, Decimal], Decimal]):
-        self.a = a
-        self.b = b
+    """Encapsulates an arithmetic operation with two operands."""
+
+    def __init__(self, operand1: Decimal, operand2: Decimal, operation: Callable[[Decimal, Decimal], Decimal]):
+        """Initializes a calculation with two operands and an operation."""
+        self.operand1 = operand1
+        self.operand2 = operand2
         self.operation = operation
-    
-    @staticmethod    
-    def create(a: Decimal, b: Decimal, operation: Callable[[Decimal, Decimal], Decimal]):
-        return Calculation(a, b, operation)
+
+    @staticmethod
+    def create(operand1: Decimal, operand2: Decimal, operation: Callable[[Decimal, Decimal], Decimal]):
+        """Creates and returns a new Calculation object."""
+        return Calculation(operand1, operand2, operation)
+
     def perform(self) -> Decimal:
-        return self.operation(self.a, self.b)
+        """Performs the arithmetic operation and returns the result."""
+        return self.operation(self.operand1, self.operand2)
+
     def __repr__(self):
-        return f"Calculation({self.a}, {self.b}, {self.operation.__name__})"
-    
+        """Provides a readable string representation of the calculation."""
+        return f"Calculation({self.operand1}, {self.operand2}, {self.operation.__name__})"
