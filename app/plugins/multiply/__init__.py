@@ -1,3 +1,4 @@
+import logging
 from app.commands import Command
 
 class MultiplyCommand(Command):
@@ -6,5 +7,6 @@ class MultiplyCommand(Command):
         a = int(a)
         b = int(b)
         result = a * b
+        logging.info(f"The result of {a} * {b} is {result}")
         print(f"The result of {a} * {b} is {result}")
         
