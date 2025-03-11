@@ -18,3 +18,4 @@ class SubtractCommand(Command):
             # Raising ValueError for invalid input
             logging.error("Invalid input: Please provide valid integers.")
             raise ValueError("Invalid input: Please provide valid integers.")
+        
