@@ -9,7 +9,6 @@ This project presents an advanced Python-based calculator featuring a robust com
 - **Professional Logging**: Configurable logging settings, including log levels and output destinations, controlled via environment variables, adhering to professional logging standards.
 - **Testing and Code Quality**: Achieved over 90% code coverage using Pytest and adhered to PEP 8 standards, validated by Pylint.
 - **Version Control**: Follows best practices by logically grouping commits for feature development and related tests.
- 
 
 ## Key Design Patterns Used
 
