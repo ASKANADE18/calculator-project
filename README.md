@@ -24,3 +24,5 @@ The project configures logging settings, such as log levels and output destinati
 ## Exception Handling: LBYL and EAFP
 
 The project follows both "Look Before You Leap" (LBYL) and "Easier to Ask for Forgiveness than Permission" (EAFP) approaches in exception handling, maintaining robust error handling while ensuring clean, efficient code.
+
+## Video Demonstration - [Link](https://drive.google.com/file/d/1wgFL8_N3T00wfN9jpA-0A4NGbSJ0Wu6K/view)
